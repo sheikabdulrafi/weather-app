@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+}
+
+.headings {
+  width: 100vw;
+  text-align: center;
+}
+
+h2 {
+  color: yellow;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  display: block;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+
+.city {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: none;
+}
+
+.city input {
+  border: 2px solid black;
+  font-size: 1.15rem;
+  padding: 5px;
+  transition: all 1s linear ease-in-out;
+}
+.city input:nth-child(1) {
+  border-right: none;
+  width: 350px;
+  border-top-left-radius: 10px;
+  background: transparent;
+  color: white;
+}
+
+.city input:nth-child(1)::placeholder {
+  color: white;
+}
+
+.city input:nth-child(2) {
+  border-bottom-right-radius: 10px;
+  background-color: transparent;
+  color: yellow;
+}
+
+.city input:nth-child(2):hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  color: white;
+  font-weight: 300;
+}
+
+.weatherContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  margin-top: 20px;
+}
+
+.weatherContainer .report {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 230px;
+  height: 330px;
+  border: 2px solid black;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.weatherContainer .report:hover {
+  border: 5px solid #9c0000;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.weatherContainer .report .title {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 800;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 8px 0px;
+}
+
+.weatherContainer .report .content {
+  font-size: 1.65em;
+  padding: 8px 0px;
+  font-weight: 800;
+}
+
+img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .root {
+    height: auto;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    margin: 10px 0px;
+    font-size: 1.5rem;
+  }
+  .weatherContainer .report {
+    width: 80%;
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .city input:nth-child(1) {
+    padding: 15px;
+  }
+}

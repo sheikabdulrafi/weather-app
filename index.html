@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="headings">
+        <h2>Adarak Abbas</h2>
+        <h1>Vedi Vedi Weather Report</h1>
+      </div>
+      <div class="city">
+        <input
+          type="text"
+          placeholder="Enter a city name"
+          id="cityInput"
+          class="cityInput"
+        />
+        <input
+          type="submit"
+          value="Submit"
+          id="submit"
+          class="submit"
+          onclick="weatherReport()"
+        />
+      </div>
+      <div class="weatherContainer">
+        <div class="report">
+          <img src="./assets/weather.gif" alt="" />
+          <span class="title">Weather</span>
+          <span class="weather content">No Data</span>
+        </div>
+        <div class="report">
+          <img src="./assets/hot.gif" alt="" />
+          <span class="title">Temparature</span>
+          <span class="temp content">No Data</span>
+        </div>
+        <div class="report">
+          <img src="./assets/wind.gif" alt="" />
+          <span class="title">Wind Speed</span>
+          <span class="wind content">No Data</span>
+        </div>
+        <div class="report">
+          <img src="./assets/humidity.gif" alt="" />
+          <span class="title">Humidity</span>
+          <span class="humidity content">No Data</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
